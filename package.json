@@ -1,0 +1,19 @@
+{
+  "name": "lambassador-school",
+  "version": "1.0.0",
+  "description": "L'Ambassador School - Training Sales Ambassadors for Luxury Brands",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "luxury",
+    "training",
+    "sales",
+    "ambassador",
+    "landing-page"
+  ],
+  "author": "L'Ambassador School",
+  "license": "ISC"
+}
