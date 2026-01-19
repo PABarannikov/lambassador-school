@@ -63,7 +63,7 @@ Sent from lambassadorschool.com contact form
     } else {
       const errorText = await emailResponse.text();
       console.error('Email send failed:', errorText);
-      return new Response(JSON.stringify({ error: 'Failed to send email' }), {
+      return new Response(JSON.stringify({ error: 'Failed to send email', details: errorText }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }
       });
