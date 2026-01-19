@@ -45,7 +45,7 @@ export async function onRequestPost(context) {
     }
   } catch (error) {
     console.error('Contact form error:', error);
-    return new Response(JSON.stringify({ error: 'Server error' }), {
+    return new Response(JSON.stringify({ error: 'Server error', details: error.message }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
     });
