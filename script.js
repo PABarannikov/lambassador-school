@@ -124,25 +124,33 @@ function initContactForm() {
         };
 
         try {
-            // Send to server
-            const response = await fetch('/api/contact', {
+            // Send directly to Web3Forms
+            const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify({
+                    access_key: 'f1c66897-12fa-4144-8688-9ebef8a09aa7',
+                    subject: `New Enquiry: ${formData.service} - from ${formData.name}`,
+                    from_name: "L'Ambassador School Website",
+                    name: formData.name,
+                    email: formData.email,
+                    service: formData.service,
+                    message: formData.message || 'No message provided'
+                })
             });
 
-            if (response.ok) {
-                // Success
+            const result = await response.json();
+
+            if (result.success) {
                 showNotification('Thank you! Your message has been sent successfully.', 'success');
                 form.reset();
             } else {
-                throw new Error('Server error');
+                throw new Error('Failed to send');
             }
         } catch (error) {
             showNotification('Sorry, there was an error sending your message. Please try again.', 'error');
-            form.reset();
         } finally {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
