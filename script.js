@@ -114,10 +114,11 @@ function initContactForm() {
         submitBtn.disabled = true;
 
         // Collect form data
+        const companyField = form.querySelector('#company');
         const formData = {
             name: form.querySelector('#name').value,
             email: form.querySelector('#email').value,
-            company: form.querySelector('#company').value,
+            company: companyField ? companyField.value : '',
             service: form.querySelector('#service').value,
             message: form.querySelector('#message').value
         };
