@@ -140,8 +140,7 @@ function initContactForm() {
                 throw new Error('Server error');
             }
         } catch (error) {
-            // For now, just show success since we don't have a backend
-            showNotification('Thank you! Your message has been sent successfully.', 'success');
+            showNotification('Sorry, there was an error sending your message. Please try again.', 'error');
             form.reset();
         } finally {
             submitBtn.textContent = originalText;
