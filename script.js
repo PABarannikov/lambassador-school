@@ -360,7 +360,7 @@ function initLanguageSwitcher() {
             'mission-4': 'Create emotional connections that turn clients into loyal advocates',
 
             // Founder
-            'founder-label': 'Meet the Founder',
+            'founder-label': 'About the Founder',
             'founder-title': 'Olga',
             'founder-text-1': 'Possessing vast professional experience within the luxury and premium brand sector, working closely with diverse, multicultural teams in demanding, high-excellence environments. My expertise lies in translating brand DNA into meaningful learning experiences that enhance leadership effectiveness, elevate customer experience, and reinforce the highest standards of performance and service excellence.',
             'founder-text-2': 'Originally trained as a teacher with five years of university education and a CELTA certification, I possess a strong pedagogical foundation in adult learning methodologies, facilitation, and training design. This academic grounding, combined with advanced professional training at LVMH Group and formal studies with the CIPD (Chartered Institute of Personnel and Development), enables me to design and deliver structured, engaging, and high-impact bespoke learning solutions aligned with strategic business objectives.',
@@ -468,7 +468,7 @@ function initLanguageSwitcher() {
             'mission-4': 'Criar conexões emocionais que transformam clientes em defensores leais',
 
             // Founder
-            'founder-label': 'Conheça a Fundadora',
+            'founder-label': 'Sobre a Fundadora',
             'founder-title': 'Olga',
             'founder-text-1': 'Possuo vasta experiência profissional no setor de marcas de luxo e premium, trabalhando de perto com equipas diversas e multiculturais em ambientes exigentes e de alta excelência. A minha especialidade reside em traduzir o DNA da marca em experiências de aprendizagem significativas que melhoram a eficácia da liderança, elevam a experiência do cliente e reforçam os mais altos padrões de desempenho e excelência de serviço.',
             'founder-text-2': 'Originalmente formada como professora com cinco anos de educação universitária e certificação CELTA, possuo uma base pedagógica sólida em metodologias de aprendizagem de adultos, facilitação e design de formação. Esta base académica, combinada com formação profissional avançada no Grupo LVMH e estudos formais com o CIPD (Chartered Institute of Personnel and Development), permite-me conceber e entregar soluções de aprendizagem personalizadas, estruturadas, envolventes e de alto impacto, alinhadas com objetivos estratégicos de negócio.',
