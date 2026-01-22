@@ -340,7 +340,7 @@ function initLanguageSwitcher() {
             'vision-7-text': 'Adapt to evolving luxury and service expectations',
 
             // Trainings
-            'trainings-label': 'Our Trainings',
+            'trainings-label': 'Each Training',
             'trainings-title': 'Transformative Programmes',
             'training-1-title': 'Speaking Luxury',
             'training-1-text': 'Develop a true luxury mindset and learn how language, attitude, and emotional intelligence shape perception. This training focuses on offering a lifestyle, delivering excellence under pressure, and creating memorable final impressions that leave a lasting impact.',
@@ -448,7 +448,7 @@ function initLanguageSwitcher() {
             'vision-7-text': 'Adaptar-se às expectativas em evolução do luxo e serviço',
 
             // Trainings
-            'trainings-label': 'As Nossas Formações',
+            'trainings-label': 'Cada Formação',
             'trainings-title': 'Programas Transformadores',
             'training-1-title': 'Falar Luxo',
             'training-1-text': 'Desenvolva uma verdadeira mentalidade de luxo e aprenda como a linguagem, atitude e inteligência emocional moldam a perceção. Esta formação foca-se em oferecer um estilo de vida, entregar excelência sob pressão e criar impressões finais memoráveis que deixam um impacto duradouro.',
