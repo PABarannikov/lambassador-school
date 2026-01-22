@@ -1192,6 +1192,16 @@ h1, h2, h3, h4 {
     transition: border-color var(--transition-fast);
 }
 
+/* Override browser autofill styles */
+.form-group input:-webkit-autofill,
+.form-group input:-webkit-autofill:hover,
+.form-group input:-webkit-autofill:focus,
+.form-group input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--color-dark) inset !important;
+    -webkit-text-fill-color: var(--color-white) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 .form-group textarea {
     resize: vertical;
     min-height: 100px;
