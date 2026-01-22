@@ -147,7 +147,8 @@ function initContactForm() {
                 showNotification('Thank you! Your message has been sent successfully.', 'success');
                 form.reset();
             } else {
-                throw new Error('Failed to send');
+                const errorMsg = result.message || 'Failed to send message. Please try again.';
+                showNotification(errorMsg, 'error');
             }
         } catch (error) {
             showNotification('Sorry, there was an error sending your message. Please try again.', 'error');
