@@ -296,6 +296,7 @@ function initLanguageSwitcher() {
             'hero-title-2': 'Sales Ambassadors',
             'hero-title-3': 'for powerful brands.',
             'hero-subtitle': 'We believe that reaching excellence in customer service is a continuous journey — one that evolves, elevates, and never ends.',
+            'hero-tagline-bottom': 'Elevating Service. Inspiring Excellence.',
             'hero-cta-1': 'Get in Touch',
             'hero-cta-2': 'Our Programmes',
 
@@ -405,6 +406,7 @@ function initLanguageSwitcher() {
             'hero-title-2': 'Embaixadores de Vendas',
             'hero-title-3': 'para marcas de prestígio.',
             'hero-subtitle': 'Acreditamos que alcançar a excelência no serviço ao cliente é uma jornada contínua — que evolui, eleva e nunca termina.',
+            'hero-tagline-bottom': 'Elevando o Serviço. Inspirando Excelência.',
             'hero-cta-1': 'Entre em Contacto',
             'hero-cta-2': 'Os Nossos Programas',
 
