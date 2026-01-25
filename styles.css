@@ -1548,7 +1548,19 @@ h1, h2, h3, h4 {
     }
 
     .hero-title {
-        font-size: clamp(1rem, 4vw, 1.5rem);
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.75rem;
+    }
+
+    .hero-tagline-bottom {
+        font-size: 1rem;
+    }
+
+    .hero-tagline-bottom::before {
+        width: 300px;
     }
 }
 
@@ -1676,7 +1688,19 @@ h1, h2, h3, h4 {
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 1rem;
+        font-size: 1.4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.65rem;
+    }
+
+    .hero-tagline-bottom {
+        font-size: 0.85rem;
+    }
+
+    .hero-tagline-bottom::before {
+        width: 200px;
     }
 
     .section-title {
