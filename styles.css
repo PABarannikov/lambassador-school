@@ -327,7 +327,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: clamp(1.25rem, 3vw, 2.25rem);
     font-weight: 300;
     margin-bottom: 30px;
     opacity: 0;
@@ -1548,7 +1548,7 @@ h1, h2, h3, h4 {
     }
 
     .hero-title {
-        font-size: clamp(2rem, 8vw, 3rem);
+        font-size: clamp(1rem, 4vw, 1.5rem);
     }
 }
 
@@ -1676,7 +1676,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .section-title {
