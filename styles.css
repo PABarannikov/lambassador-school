@@ -382,9 +382,9 @@ h1, h2, h3, h4 {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 600px;
     height: 1px;
-    background-color: var(--color-gold);
+    background-color: var(--color-white);
 }
 
 .hero-cta {
