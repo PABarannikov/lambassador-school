@@ -23,6 +23,11 @@
     --transition-slow: 0.6s ease;
 }
 
+/* Utility Classes */
+.text-gold {
+    color: var(--color-gold);
+}
+
 /* Reset & Base */
 *, *::before, *::after {
     box-sizing: border-box;

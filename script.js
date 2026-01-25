@@ -305,7 +305,7 @@ function initLanguageSwitcher() {
             'about-text-1': 'L\'Ambassador School is Portugal\'s pioneering concept academy dedicated to developing top Sales Ambassadors through exclusive, tailor-made programmes and workshops aligned with each brand\'s DNA, standards, and philosophy.',
             'about-text-2': 'Shaping the next generation of exceptional Sales Ambassadors. We inspire ambition, develop talent, and transform potential into excellence.',
             'about-text-3': 'At L\'Ambassador School, we empower our students and clients with cutting-edge techniques, refined methods, and high-impact communication skills that boost confidence and elevate performance. Our training ensures every participant is prepared to deliver a truly tailor-made, memorable and impeccable customer experience — every time.',
-            'about-highlight': 'We train, educate, inspire, and cultivate a deep, lasting passion for this remarkable profession — Sales Ambassador.',
+            'about-highlight': 'We train, educate, inspire, and cultivate a deep, lasting passion for this remarkable profession — <span class="text-gold">Sales Ambassador</span>.',
 
             // What We Do
             'whatwedo-label': 'We Offer',
@@ -414,7 +414,7 @@ function initLanguageSwitcher() {
             'about-text-1': 'A L\'Ambassador School é a academia pioneira em Portugal dedicada ao desenvolvimento de Embaixadores de Vendas de excelência através de programas e workshops exclusivos e personalizados, alinhados com o ADN, padrões e filosofia de cada marca.',
             'about-text-2': 'Moldando a próxima geração de Embaixadores de Vendas excecionais. Inspiramos ambição, desenvolvemos talento e transformamos potencial em excelência.',
             'about-text-3': 'Na L\'Ambassador School, capacitamos os nossos alunos e clientes com técnicas de vanguarda, métodos refinados e competências de comunicação de alto impacto que aumentam a confiança e elevam o desempenho. A nossa formação garante que cada participante está preparado para oferecer uma experiência de cliente verdadeiramente personalizada, memorável e impecável — sempre.',
-            'about-highlight': 'Formamos, educamos, inspiramos e cultivamos uma paixão profunda e duradoura por esta profissão notável — Embaixador de Vendas.',
+            'about-highlight': 'Formamos, educamos, inspiramos e cultivamos uma paixão profunda e duradoura por esta profissão notável — <span class="text-gold">Embaixador de Vendas</span>.',
 
             // What We Do
             'whatwedo-label': 'Oferecemos',
@@ -548,7 +548,7 @@ function initLanguageSwitcher() {
         document.querySelectorAll('[data-translate]').forEach(el => {
             const key = el.dataset.translate;
             if (t[key]) {
-                el.textContent = t[key];
+                el.innerHTML = t[key];
             }
         });
 
