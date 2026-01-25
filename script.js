@@ -292,9 +292,7 @@ function initLanguageSwitcher() {
             // Hero
             'hero-badge': 'Lisbon, Portugal',
             'hero-tagline': 'Training the best Sales Ambassadors for powerful brands.',
-            'hero-title-1': 'Elevating Service.',
-            'hero-title-2': 'Inspiring Excellence.',
-            'hero-title-3': 'Creating Top Brand Ambassadors.',
+            'hero-title-1': 'Training the best Sales Ambassadors for powerful brands.',
             'hero-subtitle': 'We believe that reaching excellence in customer service is a continuous journey — one that evolves, elevates, and never ends.',
             'hero-cta-1': 'Get in Touch',
             'hero-cta-2': 'Our Programmes',
@@ -388,7 +386,7 @@ function initLanguageSwitcher() {
             'form-option-4': 'Other',
 
             // Footer
-            'footer-tagline': 'Elevating Service. Inspiring Excellence. Creating Top Brand Ambassadors.',
+            'footer-tagline': 'Training the best Sales Ambassadors for powerful brands.',
             'footer-links-title': 'Quick Links',
             'footer-social-title': 'Follow Us',
             'footer-link-about': 'About Us',
@@ -401,9 +399,7 @@ function initLanguageSwitcher() {
             // Hero
             'hero-badge': 'Lisboa, Portugal',
             'hero-tagline': 'Formando os melhores Embaixadores de Vendas para marcas de prestígio.',
-            'hero-title-1': 'Elevar o Serviço.',
-            'hero-title-2': 'Inspirar Excelência.',
-            'hero-title-3': 'Criar os Melhores Embaixadores de Marca.',
+            'hero-title-1': 'Formando os melhores Embaixadores de Vendas para marcas de prestígio.',
             'hero-subtitle': 'Acreditamos que alcançar a excelência no serviço ao cliente é uma jornada contínua — que evolui, eleva e nunca termina.',
             'hero-cta-1': 'Entre em Contacto',
             'hero-cta-2': 'Os Nossos Programas',
@@ -497,7 +493,7 @@ function initLanguageSwitcher() {
             'form-option-4': 'Outro',
 
             // Footer
-            'footer-tagline': 'Elevar o Serviço. Inspirar Excelência. Criar os Melhores Embaixadores de Marca.',
+            'footer-tagline': 'Formando os melhores Embaixadores de Vendas para marcas de prestígio.',
             'footer-links-title': 'Links Rápidos',
             'footer-social-title': 'Siga-nos',
             'footer-link-about': 'Sobre Nós',
@@ -559,7 +555,7 @@ function initLanguageSwitcher() {
 
         // Update page title
         document.title = lang === 'pt'
-            ? 'L\'Ambassador School | Elevar o Serviço. Inspirar Excelência.'
-            : 'L\'Ambassador School | Elevating Service. Inspiring Excellence.';
+            ? 'L\'Ambassador School | Formando os melhores Embaixadores de Vendas para marcas de prestígio.'
+            : 'L\'Ambassador School | Training the best Sales Ambassadors for powerful brands.';
     }
 }
