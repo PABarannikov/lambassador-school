@@ -592,27 +592,27 @@ h1, h2, h3, h4 {
 }
 
 .about-title-large {
-    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     color: var(--color-gold);
 }
 
 .whatwedo-title-large {
-    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     color: var(--color-gold);
 }
 
 .trainings-title-large {
-    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     color: var(--color-gold);
 }
 
 .founder-title-large {
-    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     color: var(--color-gold);
 }
 
 .contact-title-large {
-    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     color: var(--color-gold);
 }
 
