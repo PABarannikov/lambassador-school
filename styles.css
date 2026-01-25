@@ -353,7 +353,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-subtitle {
-    font-size: 1.65rem;
+    font-size: 0.825rem;
     font-weight: 300;
     color: var(--color-light-gray);
     max-width: 600px;
