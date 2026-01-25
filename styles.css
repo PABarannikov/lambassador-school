@@ -343,6 +343,10 @@ h1, h2, h3, h4 {
     text-align: center;
 }
 
+.hero-title-line.text-gold {
+    color: var(--color-gold);
+}
+
 .hero-title-accent {
     display: block;
     color: var(--color-gold);
