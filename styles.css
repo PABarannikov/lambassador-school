@@ -369,9 +369,22 @@ h1, h2, h3, h4 {
     letter-spacing: 2px;
     color: var(--color-gold);
     margin-bottom: 50px;
+    padding-top: 20px;
+    position: relative;
     opacity: 0;
     animation: fadeInUp 0.8s ease forwards;
     animation-delay: 0.8s;
+}
+
+.hero-tagline-bottom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background-color: var(--color-gold);
 }
 
 .hero-cta {
