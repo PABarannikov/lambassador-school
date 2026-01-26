@@ -1440,6 +1440,10 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 1079px) {
+    .hero-title-line {
+        white-space: normal;
+    }
+
     .logo-img {
         height: 32px;
     }
