@@ -28,6 +28,10 @@
     color: var(--color-gold);
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
 /* Reset & Base */
 *, *::before, *::after {
     box-sizing: border-box;
