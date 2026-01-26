@@ -764,6 +764,11 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
+    .section-star,
+    .hero-star {
+        width: 53px;
+    }
+
     .offer-grid {
         grid-template-columns: 1fr;
         gap: 40px;
