@@ -30,37 +30,71 @@
             text-transform: uppercase;
         }
 
-        .frames-container {
+        .animation-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
             display: flex;
-            flex-wrap: wrap;
+            align-items: center;
             justify-content: center;
-            gap: 30px;
-            max-width: 1400px;
         }
 
         .frame {
-            width: 150px;
-            height: 150px;
+            position: absolute;
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
-            animation: slowRotate var(--duration) linear infinite;
-            animation-delay: var(--delay);
-            filter: drop-shadow(0 0 10px rgba(201, 162, 39, 0.3));
-            transition: transform 0.3s ease;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            filter: drop-shadow(0 0 20px rgba(201, 162, 39, 0.3));
         }
 
-        .frame:hover {
-            animation-play-state: paused;
-            transform: scale(1.5);
-            z-index: 10;
+        .frame.active {
+            opacity: 1;
         }
 
-        @keyframes slowRotate {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+        .controls {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .control-btn {
+            background: transparent;
+            border: 1px solid #c9a227;
+            color: #c9a227;
+            padding: 12px 30px;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Georgia', serif;
+        }
+
+        .control-btn:hover {
+            background: #c9a227;
+            color: #0d0d0d;
+        }
+
+        .speed-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #c9a227;
+        }
+
+        .speed-slider {
+            width: 150px;
+            accent-color: #c9a227;
+        }
+
+        .frame-counter {
+            color: #888;
+            font-size: 14px;
+            margin-top: 20px;
+            letter-spacing: 2px;
         }
 
         .back-link {
@@ -84,37 +118,101 @@
 <body>
     <h1>L'Ambassador School</h1>
 
-    <div class="frames-container">
-        <img src="horse_frames/frame_000.png" alt="Frame 0" class="frame" style="--duration: 20s; --delay: 0s;">
-        <img src="horse_frames/frame_001.png" alt="Frame 1" class="frame" style="--duration: 22s; --delay: -2s;">
-        <img src="horse_frames/frame_002.png" alt="Frame 2" class="frame" style="--duration: 24s; --delay: -4s;">
-        <img src="horse_frames/frame_003.png" alt="Frame 3" class="frame" style="--duration: 26s; --delay: -6s;">
-        <img src="horse_frames/frame_004.png" alt="Frame 4" class="frame" style="--duration: 28s; --delay: -8s;">
-        <img src="horse_frames/frame_005.png" alt="Frame 5" class="frame" style="--duration: 30s; --delay: -10s;">
-        <img src="horse_frames/frame_006.png" alt="Frame 6" class="frame" style="--duration: 32s; --delay: -12s;">
-        <img src="horse_frames/frame_007.png" alt="Frame 7" class="frame" style="--duration: 20s; --delay: -1s;">
-        <img src="horse_frames/frame_008.png" alt="Frame 8" class="frame" style="--duration: 22s; --delay: -3s;">
-        <img src="horse_frames/frame_009.png" alt="Frame 9" class="frame" style="--duration: 24s; --delay: -5s;">
-        <img src="horse_frames/frame_010.png" alt="Frame 10" class="frame" style="--duration: 26s; --delay: -7s;">
-        <img src="horse_frames/frame_011.png" alt="Frame 11" class="frame" style="--duration: 28s; --delay: -9s;">
-        <img src="horse_frames/frame_012.png" alt="Frame 12" class="frame" style="--duration: 30s; --delay: -11s;">
-        <img src="horse_frames/frame_013.png" alt="Frame 13" class="frame" style="--duration: 32s; --delay: -13s;">
-        <img src="horse_frames/frame_014.png" alt="Frame 14" class="frame" style="--duration: 20s; --delay: -2s;">
-        <img src="horse_frames/frame_015.png" alt="Frame 15" class="frame" style="--duration: 22s; --delay: -4s;">
-        <img src="horse_frames/frame_016.png" alt="Frame 16" class="frame" style="--duration: 24s; --delay: -6s;">
-        <img src="horse_frames/frame_017.png" alt="Frame 17" class="frame" style="--duration: 26s; --delay: -8s;">
-        <img src="horse_frames/frame_018.png" alt="Frame 18" class="frame" style="--duration: 28s; --delay: -10s;">
-        <img src="horse_frames/frame_019.png" alt="Frame 19" class="frame" style="--duration: 30s; --delay: -12s;">
-        <img src="horse_frames/frame_020.png" alt="Frame 20" class="frame" style="--duration: 32s; --delay: -14s;">
-        <img src="horse_frames/frame_021.png" alt="Frame 21" class="frame" style="--duration: 20s; --delay: -3s;">
-        <img src="horse_frames/frame_022.png" alt="Frame 22" class="frame" style="--duration: 22s; --delay: -5s;">
-        <img src="horse_frames/frame_023.png" alt="Frame 23" class="frame" style="--duration: 24s; --delay: -7s;">
-        <img src="horse_frames/frame_024.png" alt="Frame 24" class="frame" style="--duration: 26s; --delay: -9s;">
-        <img src="horse_frames/frame_025.png" alt="Frame 25" class="frame" style="--duration: 28s; --delay: -11s;">
-        <img src="horse_frames/frame_026.png" alt="Frame 26" class="frame" style="--duration: 30s; --delay: -13s;">
-        <img src="horse_frames/frame_027.png" alt="Frame 27" class="frame" style="--duration: 32s; --delay: -15s;">
+    <div class="animation-container">
+        <img src="horse_frames/frame_000.png" alt="Frame 0" class="frame active">
+        <img src="horse_frames/frame_001.png" alt="Frame 1" class="frame">
+        <img src="horse_frames/frame_002.png" alt="Frame 2" class="frame">
+        <img src="horse_frames/frame_003.png" alt="Frame 3" class="frame">
+        <img src="horse_frames/frame_004.png" alt="Frame 4" class="frame">
+        <img src="horse_frames/frame_005.png" alt="Frame 5" class="frame">
+        <img src="horse_frames/frame_006.png" alt="Frame 6" class="frame">
+        <img src="horse_frames/frame_007.png" alt="Frame 7" class="frame">
+        <img src="horse_frames/frame_008.png" alt="Frame 8" class="frame">
+        <img src="horse_frames/frame_009.png" alt="Frame 9" class="frame">
+        <img src="horse_frames/frame_010.png" alt="Frame 10" class="frame">
+        <img src="horse_frames/frame_011.png" alt="Frame 11" class="frame">
+        <img src="horse_frames/frame_012.png" alt="Frame 12" class="frame">
+        <img src="horse_frames/frame_013.png" alt="Frame 13" class="frame">
+        <img src="horse_frames/frame_014.png" alt="Frame 14" class="frame">
+        <img src="horse_frames/frame_015.png" alt="Frame 15" class="frame">
+        <img src="horse_frames/frame_016.png" alt="Frame 16" class="frame">
+        <img src="horse_frames/frame_017.png" alt="Frame 17" class="frame">
+        <img src="horse_frames/frame_018.png" alt="Frame 18" class="frame">
+        <img src="horse_frames/frame_019.png" alt="Frame 19" class="frame">
+        <img src="horse_frames/frame_020.png" alt="Frame 20" class="frame">
+        <img src="horse_frames/frame_021.png" alt="Frame 21" class="frame">
+        <img src="horse_frames/frame_022.png" alt="Frame 22" class="frame">
+        <img src="horse_frames/frame_023.png" alt="Frame 23" class="frame">
+        <img src="horse_frames/frame_024.png" alt="Frame 24" class="frame">
+        <img src="horse_frames/frame_025.png" alt="Frame 25" class="frame">
+        <img src="horse_frames/frame_026.png" alt="Frame 26" class="frame">
+        <img src="horse_frames/frame_027.png" alt="Frame 27" class="frame">
+    </div>
+
+    <div class="frame-counter">
+        Frame <span id="currentFrame">1</span> / 28
+    </div>
+
+    <div class="controls">
+        <button class="control-btn" id="playPauseBtn">Pause</button>
+        <div class="speed-control">
+            <span>Speed:</span>
+            <input type="range" min="500" max="3000" value="1500" class="speed-slider" id="speedSlider">
+            <span id="speedValue">1.5s</span>
+        </div>
     </div>
 
     <a href="index.html" class="back-link">Back to Home</a>
+
+    <script>
+        const frames = document.querySelectorAll('.frame');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const speedSlider = document.getElementById('speedSlider');
+        const speedValue = document.getElementById('speedValue');
+        const currentFrameDisplay = document.getElementById('currentFrame');
+
+        let currentFrame = 0;
+        let isPlaying = true;
+        let intervalId;
+        let speed = 1500;
+
+        function showNextFrame() {
+            frames[currentFrame].classList.remove('active');
+            currentFrame = (currentFrame + 1) % frames.length;
+            frames[currentFrame].classList.add('active');
+            currentFrameDisplay.textContent = currentFrame + 1;
+        }
+
+        function startAnimation() {
+            intervalId = setInterval(showNextFrame, speed);
+        }
+
+        function stopAnimation() {
+            clearInterval(intervalId);
+        }
+
+        playPauseBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                stopAnimation();
+                playPauseBtn.textContent = 'Play';
+            } else {
+                startAnimation();
+                playPauseBtn.textContent = 'Pause';
+            }
+            isPlaying = !isPlaying;
+        });
+
+        speedSlider.addEventListener('input', (e) => {
+            speed = parseInt(e.target.value);
+            speedValue.textContent = (speed / 1000).toFixed(1) + 's';
+            if (isPlaying) {
+                stopAnimation();
+                startAnimation();
+            }
+        });
+
+        // Start the animation
+        startAnimation();
+    </script>
 </body>
 </html>
