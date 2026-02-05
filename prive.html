@@ -72,74 +72,6 @@
             opacity: 1;
         }
 
-        .indicators {
-            display: flex;
-            gap: 12px;
-            margin-top: 30px;
-        }
-
-        .indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(201, 162, 39, 0.3);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .indicator.active {
-            background: #c9a227;
-            transform: scale(1.2);
-        }
-
-        .indicator:hover {
-            background: rgba(201, 162, 39, 0.6);
-        }
-
-        .controls {
-            margin-top: 30px;
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .control-btn {
-            background: transparent;
-            border: 1px solid #c9a227;
-            color: #c9a227;
-            padding: 12px 30px;
-            font-size: 14px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Georgia', serif;
-        }
-
-        .control-btn:hover {
-            background: #c9a227;
-            color: #0d0d0d;
-        }
-
-        .nav-btn {
-            background: transparent;
-            border: 1px solid #c9a227;
-            color: #c9a227;
-            width: 50px;
-            height: 50px;
-            font-size: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .nav-btn:hover {
-            background: #c9a227;
-            color: #0d0d0d;
-        }
-
         .back-link {
             display: inline-block;
             margin-top: 50px;
@@ -222,18 +154,6 @@
             <img src="Prive/3.jpg" alt="Slide 3" class="slide">
         </div>
 
-        <div class="indicators">
-            <div class="indicator active" data-index="0"></div>
-            <div class="indicator" data-index="1"></div>
-            <div class="indicator" data-index="2"></div>
-        </div>
-
-        <div class="controls">
-            <button class="nav-btn" id="prevBtn">&#8249;</button>
-            <button class="control-btn" id="playPauseBtn">Pause</button>
-            <button class="nav-btn" id="nextBtn">&#8250;</button>
-        </div>
-
         <div class="marquee-container">
             <div class="marquee">
                 <div class="marquee-content">
@@ -290,83 +210,15 @@
 
     <script>
         const slides = document.querySelectorAll('.slide');
-        const indicators = document.querySelectorAll('.indicator');
-        const playPauseBtn = document.getElementById('playPauseBtn');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-
         let currentSlide = 0;
-        let isPlaying = true;
-        let intervalId;
-        const speed = 4000;
-
-        function showSlide(index) {
-            slides[currentSlide].classList.remove('active');
-            indicators[currentSlide].classList.remove('active');
-
-            currentSlide = index;
-            if (currentSlide >= slides.length) currentSlide = 0;
-            if (currentSlide < 0) currentSlide = slides.length - 1;
-
-            slides[currentSlide].classList.add('active');
-            indicators[currentSlide].classList.add('active');
-        }
 
         function nextSlide() {
-            showSlide(currentSlide + 1);
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
         }
 
-        function prevSlide() {
-            showSlide(currentSlide - 1);
-        }
-
-        function startSlideshow() {
-            intervalId = setInterval(nextSlide, speed);
-        }
-
-        function stopSlideshow() {
-            clearInterval(intervalId);
-        }
-
-        playPauseBtn.addEventListener('click', () => {
-            if (isPlaying) {
-                stopSlideshow();
-                playPauseBtn.textContent = 'Play';
-            } else {
-                startSlideshow();
-                playPauseBtn.textContent = 'Pause';
-            }
-            isPlaying = !isPlaying;
-        });
-
-        prevBtn.addEventListener('click', () => {
-            prevSlide();
-            if (isPlaying) {
-                stopSlideshow();
-                startSlideshow();
-            }
-        });
-
-        nextBtn.addEventListener('click', () => {
-            nextSlide();
-            if (isPlaying) {
-                stopSlideshow();
-                startSlideshow();
-            }
-        });
-
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                showSlide(index);
-                if (isPlaying) {
-                    stopSlideshow();
-                    startSlideshow();
-                }
-            });
-        });
-
-        // Start the slideshow
-        startSlideshow();
+        setInterval(nextSlide, 4000);
     </script>
 </body>
 </html>
