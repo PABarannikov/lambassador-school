@@ -140,77 +140,6 @@
             color: #0d0d0d;
         }
 
-        /* Content Sections */
-        .content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-
-        .section {
-            margin-bottom: 80px;
-            text-align: center;
-        }
-
-        .section-title {
-            color: #c9a227;
-            font-size: 1.8rem;
-            font-weight: 300;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-        }
-
-        .section-subtitle {
-            color: #c9a227;
-            font-size: 1.2rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .section p {
-            font-size: 1rem;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            color: #b0b0b0;
-        }
-
-        .divider {
-            width: 100px;
-            height: 1px;
-            background: #c9a227;
-            margin: 60px auto;
-        }
-
-        .intro {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            background: rgba(201, 162, 39, 0.05);
-            border: 1px solid rgba(201, 162, 39, 0.2);
-            padding: 40px;
-            margin-bottom: 30px;
-            border-radius: 4px;
-        }
-
-        .founder-section {
-            background: rgba(201, 162, 39, 0.05);
-            border: 1px solid rgba(201, 162, 39, 0.2);
-            padding: 50px 40px;
-            border-radius: 4px;
-        }
-
-        .founder-name {
-            color: #c9a227;
-            font-size: 1.4rem;
-            letter-spacing: 3px;
-            margin-bottom: 25px;
-        }
-
         .back-link {
             display: inline-block;
             margin-top: 50px;
@@ -233,6 +162,52 @@
             text-align: center;
             padding: 40px 20px;
             border-top: 1px solid rgba(201, 162, 39, 0.2);
+        }
+
+        /* Running Text Marquee */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .marquee {
+            display: flex;
+            animation: marquee 60s linear infinite;
+            white-space: nowrap;
+        }
+
+        .marquee:hover {
+            animation-play-state: paused;
+        }
+
+        .marquee-content {
+            display: flex;
+            align-items: center;
+            padding-right: 100px;
+        }
+
+        .marquee-text {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            padding: 0 30px;
+        }
+
+        .marquee-separator {
+            color: #c9a227;
+            font-size: 1.2rem;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
         }
     </style>
 </head>
@@ -258,85 +233,56 @@
             <button class="control-btn" id="playPauseBtn">Pause</button>
             <button class="nav-btn" id="nextBtn">&#8250;</button>
         </div>
+
+        <div class="marquee-container">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <span class="marquee-text">A private, by-reference only, concierge service in Portugal</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Bespoke excellence for the world's most discerning travelers</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Exceptional transportation, exclusive residences, and one-of-a-kind experiences</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Absolute discretion and flawless execution</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Luxury Transportation — Chauffeured vehicles driven by elite professionals</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Exclusive Accommodation & Dining — Handpicked 5-star hotels and world-class restaurants</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Tailor-Made Experiences — Personalized itineraries from arrival to departure</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Confidentiality First — Every engagement begins with a signed NDA</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Strictly by references only — No advertising, no social media, zero public footprint</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Founded by Olga Granikowska — Renowned for discretion, professionalism, and impeccable taste</span>
+                    <span class="marquee-separator">✦</span>
+                </div>
+                <div class="marquee-content">
+                    <span class="marquee-text">A private, by-reference only, concierge service in Portugal</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Bespoke excellence for the world's most discerning travelers</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Exceptional transportation, exclusive residences, and one-of-a-kind experiences</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Absolute discretion and flawless execution</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Luxury Transportation — Chauffeured vehicles driven by elite professionals</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Exclusive Accommodation & Dining — Handpicked 5-star hotels and world-class restaurants</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Tailor-Made Experiences — Personalized itineraries from arrival to departure</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Confidentiality First — Every engagement begins with a signed NDA</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Strictly by references only — No advertising, no social media, zero public footprint</span>
+                    <span class="marquee-separator">✦</span>
+                    <span class="marquee-text">Founded by Olga Granikowska — Renowned for discretion, professionalism, and impeccable taste</span>
+                    <span class="marquee-separator">✦</span>
+                </div>
+            </div>
+        </div>
     </section>
-
-    <div class="content">
-        <section class="section intro">
-            <p>A private, by-reference only, concierge service in Portugal. Bespoke excellence for the world's most discerning travelers.</p>
-            <p>Our team curates exceptional transportation, exclusive residences, and one-of-a-kind experiences across Portugal — all with absolute discretion and flawless execution.</p>
-            <p>Created exclusively for celebrities, A-list guests, and high-net-worth individuals seeking privacy, perfection, and the art of effortless and discreet luxury.</p>
-        </section>
-
-        <div class="divider"></div>
-
-        <section class="section">
-            <h2 class="section-title">Our Services</h2>
-
-            <div class="service-card">
-                <h3 class="section-subtitle">Luxury Transportation</h3>
-                <p>Chauffeured vehicles driven by elite professionals.</p>
-                <p>A curated fleet of premium models, tailored to each client's preference.</p>
-            </div>
-
-            <div class="service-card">
-                <h3 class="section-subtitle">Exclusive Accommodation & Dining</h3>
-                <p>Handpicked 5-star hotels and world-class restaurants.</p>
-                <p>Privately curated stays in Lisbon and across Portugal.</p>
-            </div>
-
-            <div class="service-card">
-                <h3 class="section-subtitle">Tailor-Made Experiences</h3>
-                <p>Personalized itineraries.</p>
-                <p>Discreet and seamless arrangements from arrival to departure.</p>
-            </div>
-        </section>
-
-        <div class="divider"></div>
-
-        <section class="section">
-            <h2 class="section-title">How We Work</h2>
-
-            <div class="service-card">
-                <h3 class="section-subtitle">Confidentiality First</h3>
-                <p>Every engagement begins with a signed NDA between Privé and the client.</p>
-                <p>All trusted partners operate under the same confidentiality agreements — guaranteeing absolute discretion at every stage.</p>
-            </div>
-
-            <div class="service-card">
-                <h3 class="section-subtitle">Consultation & Planning</h3>
-                <p>Private consultation to define each client's needs and preferences.</p>
-                <p>Curated options — from cars and drivers to hotels and restaurants — presented for personal approval.</p>
-            </div>
-        </section>
-
-        <div class="divider"></div>
-
-        <section class="section">
-            <h2 class="section-title">Exclusivity</h2>
-            <p>Strictly by references only — no advertising, social media, no exposure. Zero public footprint.</p>
-            <p>No photos, no videos, no online promotion.</p>
-            <p>Every client enjoys complete privacy and peace of mind.</p>
-        </section>
-
-        <div class="divider"></div>
-
-        <section class="section">
-            <h2 class="section-title">The Founder</h2>
-            <div class="founder-section">
-                <p class="founder-name">Olga Granikowska</p>
-                <p>Renowned for her discretion, professionalism, and impeccable taste.</p>
-                <p>With years of experience in the international luxury sector, she has curated bespoke services for A-list celebrities, high-profile executives, and distinguished global clients.</p>
-                <p>A trusted confidante devoted to crafting flawless, confidential, and deeply personalized experiences at the highest level of refinement.</p>
-            </div>
-        </section>
-
-        <div class="divider"></div>
-
-        <section class="section">
-            <h2 class="section-title">Contact</h2>
-            <p>Under-the-radar communication — by reference only.</p>
-        </section>
-    </div>
 
     <footer class="footer">
         <a href="index.html" class="back-link">Back to Home</a>
