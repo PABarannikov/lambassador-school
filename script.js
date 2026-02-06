@@ -360,7 +360,7 @@ function initLanguageSwitcher() {
             'mission-4': 'Create emotional connections that turn clients into loyal advocates',
 
             // Founder
-            'founder-label': 'About the Founder',
+            'founder-label': 'Meet the Founder',
             'founder-title': 'Olga',
             'founder-text-1': 'With extensive professional experience in the luxury and premium brand sector, the founder of L\'Ambassador School built her career working closely with international brands and multicultural teams.',
             'founder-text-2': 'After relocating to Portugal in 2011, she continued to develop within the luxury industry, where collaboration, team engagement, and service excellence became central to her work. Sharing experience, best practices, and real-life insights with colleagues was always a natural part of her professional journey.',
@@ -468,7 +468,7 @@ function initLanguageSwitcher() {
             'mission-4': 'Criar conexões emocionais que transformam clientes em defensores leais',
 
             // Founder
-            'founder-label': 'Sobre a Fundadora',
+            'founder-label': 'Conheça a Fundadora',
             'founder-title': 'Olga',
             'founder-text-1': 'Com vasta experiência profissional no setor de marcas de luxo e premium, a fundadora da L\'Ambassador School construiu a sua carreira trabalhando de perto com marcas internacionais e equipas multiculturais.',
             'founder-text-2': 'Após mudar-se para Portugal em 2011, continuou a desenvolver-se na indústria de luxo, onde a colaboração, o envolvimento de equipas e a excelência de serviço se tornaram centrais no seu trabalho. Partilhar experiência, boas práticas e conhecimentos reais com colegas sempre foi uma parte natural do seu percurso profissional.',
